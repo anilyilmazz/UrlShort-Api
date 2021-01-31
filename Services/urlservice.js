@@ -9,7 +9,7 @@ insertUrl = async (url) => {
                 isDeleted:false
             }
         });
-        if(checkUrl.length){
+        if(checkUrl){
             return checkUrl;
         }else{
             const result = await Url.create({ url: url, shorturl: urlShort(),isDeleted:false });
