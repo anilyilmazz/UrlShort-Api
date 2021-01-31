@@ -3,7 +3,7 @@ const Url = require('../Models/url')
 insertUrl = async (url) => {
     // Url.sync({ force: true })   
     if (url) {
-        const checkUrl = await Url.findAll({
+        const checkUrl = await Url.findOne({
             where: {
                 url: url,
                 isDeleted:false
