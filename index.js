@@ -6,7 +6,9 @@ const swaggerUi = require("swagger-ui-express");
 const swaggeroptions = require('./Libs/swaggeroptions')
 const swaggerDocs = swaggerJsDoc(swaggeroptions);
 const urlRoute = require("./Routers/urlrouter");
+var cors = require('cors')
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/", urlRoute);
